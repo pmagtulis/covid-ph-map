@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pmagtulis.github.io/assets/ppm.ico" />
+    <title>Election map 2020</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Mapping the 2020 US elections">
+	<meta property="og:description" content="Two maps show how Joe Biden won the presidency against Donald Trump.">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="https://pmagtulis.github.io/assets/title-page.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@prinzmagtulis">
+
+    <style>
+
+        html, body {
+          overflow-x: hidden;
+        }
+    
+        body {
+          position: relative;
+        }
+          
+          .footer {
+            padding:8px;
+            margin-top:12px;
+          }
+    
+          .section {
+            padding:3px;
+            margin-top:12px;
+          }
+
+	  .share-btn-container a i {
+		  font-size: 24px;
+          margin: 8px 0;
+		  transition: 500ms;
+          padding: 8px;
+	  }
+
+      .share-btn-container i:hover {
+		color: #485fc7;
+      }
+
+      .share-btn-container .fa-facebook {
+          color: #fff
+      }
+
+      .share-btn-container .fa-twitter {
+          color: #fff
+      }
+
+      .share-btn-container .fa-linkedin {
+          color: #fff
+      }
+
+      .share-btn-container .fa-whatsapp {
+          color: #fff
+      }
+    
+ </style>
+
+</head>
+
+<body>
+
+    <!-- nav bar -->
+	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+		<div class="navbar-start">
+			<div class="navbar-item">
+			  <div class="share-btn-container">
+				<a href="#" class="facebook-btn">
+				  <i class="fab fa-facebook"></i>
+				</a>
+				<a href="#" class="twitter-btn">
+				  <i class="fab fa-twitter"></i>
+				</a>
+				<a href="#" class="linkedin-btn">
+				  <i class="fab fa-linkedin"></i>
+				</a>
+				<a href="#" class="whatsapp-btn">
+				  <i class="fab fa-whatsapp"></i>
+				</a>
+				</div>
+				</div>
+				</div>
+
+				<a class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				  </a>
+				  </div>
+
+					<div class="navbar-menu" id="nav-links">
+						<div class="navbar-end">
+			  <a class="navbar-item" href="https://pmagtulis.github.io/mapping">
+				Back to homepage
+			  </a>
+			  </div>
+			</div>
+			  </nav>
+
+<!-- main -->  
+    <div class="container">
+    <section class="section">
+        <p class="title is-3 has-text-centered">Here are some maps that show how Joe Biden won the 2020 US polls</p>
+        <p class="has-text-centered"><em>Biden also won big in some key counties.</em> </p>
+        <p class="has-text-centered"><em>June 3, 2022</em></p>
+    </div>
+
+<div class="container column is-half-desktop is-full-mobile is-full-tablet">
+    <div class="block">
+        This first map shows state-level voting data. Joseph "Joe" Biden won 26 states plus Washington D.C., while Donald Trump won 25.
+    </div>
+    <div class="block">
+       Through states Biden carried, he managed to carry 306 electoral votes against Trump's 232. Under the US's election system, the Electoral College decides the winner of presidential and vice presidential elections.
+       At least 270 electoral votes are needed to win.
+    </div>
+    <div class="block">
+        <p class="mb-1 title is-5">The so-called 'blue border' delivers for Biden</p>
+    <p class="mt-0 subtitle is-6">2020 presidential elections saw Democratic switch in states like Detroit, Iowa, and Arizona</p>
+    </div>
+    <div id='map'><script type='text/javascript' src="map.js"></script>
+    </div>
+    </div>
+    <div class="container column is-half-desktop is-full-mobile is-full-tablet">
+    <div class="block">
+        <p class="subtitle is-6">Source: MIT Election Data Science Lab</p>
+    </div>
+    <div class="block">
+        By county, Biden still outperformed Trump. 
+    </div>
+    <div class="block">
+        <p class="mb-1 title is-5">Large counties go for Biden</p>
+    <p class="mt-0 subtitle is-6">Circle size show difference of votes between Trump and Biden in select county</p>
+    </div>
+    <div id='map2'><script type='text/javascript' src="map2.js"></script>
+    </div>
+    <div class="container column is-full-desktop is-full-mobile is-full-tablet">
+        <div class="block">
+            <p class="subtitle is-6">Source: MIT Election Data Science Lab</p>
+            </div>
+
+
+
+    <script src="https://pmagtulis.github.io/mapping/socials.js"></script>
+	<script src="https://pmagtulis.github.io/mapping/mobile.js"></script>
+
+</body>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Made using Bulma by <a href="mailto:ppm2130@columbia.edu">Prinz Magtulis</a>. Copyright 2022.
+      </p>
+    </div>
+</div>
+  </footer>
+</section>
+</html>
