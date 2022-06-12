@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
     <meta property="og:title" content="Covid-19 in the Philippines">
-	<meta property="og:description" content="Two maps show how Joe Biden won the presidency against Donald Trump.">
+	<meta property="og:description" content="Mapping the pandemic.">
 	<meta property="og:type" content="article">
 	<meta property="og:image" content="https://pmagtulis.github.io/assets/title-page.png">
 	<meta name="twitter:card" content="summary_large_image">
@@ -39,13 +39,13 @@
 
 	  .share-btn-container a i {
 		  font-size: 24px;
-          margin: 8px 0;
+      margin: 8px 0;
 		  transition: 500ms;
-          padding: 8px;
+      padding: 8px;
 	  }
 
-      .share-btn-container i:hover {
-		color: #485fc7;
+    .share-btn-container i:hover {
+		    color: #485fc7;
       }
 
       .share-btn-container .fa-facebook {
@@ -117,14 +117,14 @@
 
 <div class="container column is-half-desktop is-full-mobile is-full-tablet">
     <div class="block">
-        The map below shows the state of Covid-19 in the Philippines as of May 28, the period on which granular case data is available.
+        The map below shows the state of Covid-19 in the Philippines <strong>as of May 28</strong>, the period on which <a href="https://doh.gov.ph/covid19tracker" target="_blank">granular case data</a> is available.
     </div>
     <div class="block">
-       By region, the National Capital Region 
+       By region, the dense National Capital Region corners majority of the cases.
     </div>
     <div class="block">
         <p class="mb-1 title is-5">Covid-19 in the Philippines</p>
-    <p class="mt-0 subtitle is-6">Click to see specific data. Zoom in to see provincial level figures</p>
+    <p class="mt-0 subtitle is-6">Click territories to see specific data. Zoom in to see provincial level figures</p>
     </div>
     <div id='map'><script type='text/javascript' src="map.js"></script>
     </div>
@@ -133,6 +133,11 @@
     <div class="block">
         <p class="subtitle is-6">Source: Department of Health</p>
     </div>
+    <div class="block">
+      The repository containing processed Covid-19 data can be found <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank">here</a>.
+  </div>
+  <div class="block">
+    This map is subject to updates.
    </div>
 
 
