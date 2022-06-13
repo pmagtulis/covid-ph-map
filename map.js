@@ -2,10 +2,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicG1hZ3R1bGlzMDciLCJhIjoiY2wzdTgyNzh0MjlqNjNjb
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/pmagtulis07/cl47r8lhp001014n747gw9ltk',
-    zoom: 3,
+    zoom: 4,
     maxZoom: 9,
-    minZoom: 5,
-    center: [121.630, 11.404]
+    minZoom: 3,
+    center: [121.630, 11.404],
+   // maxBounds: [[104.7, 10.647], [140.59, 10.6]]
 });
 
 map.on("load", function () {
@@ -28,7 +29,8 @@ map.on("load", function () {
         type: "geojson",
         data: "data/simplified_regions.geojson",
       },
-      maxzoom: 6, 
+      maxzoom: 5, 
+      minzoom: 4,
       "paint": {
         "fill-color": {
             property: "covid_cases",
@@ -53,7 +55,8 @@ map.on("load", function () {
             type: "geojson",
             data: "data/simplified_provinces.geojson",
           },
-          minzoom: 6,
+          minzoom: 5,
+          maxzoom: 7,
           paint: {
             "line-color": "#ffffff",
             "line-width": 0.25,
@@ -69,7 +72,8 @@ map.on("load", function () {
             type: "geojson",
             data: "data/simplified_provinces.geojson",
           },
-          minzoom: 6,
+          minzoom: 5,
+          maxzoom: 7,
           "paint": {
             "fill-color": {
                 property: "covid_cases",
@@ -87,7 +91,53 @@ map.on("load", function () {
         },
         "cities_outline"
       );
+
+
+      map.addLayer(
+        {
+          id: "municipal_outline",
+          type: "line",
+          source: {
+            type: "geojson",
+            data: "data/simplified_municipalities.geojson",
+          },
+          minzoom: 7,
+          paint: {
+            "line-color": "#ffffff",
+            "line-width": 0.25,
+          },
+        },
+        "cities_cases"
+      );
+      map.addLayer(
+        {
+          id: "municipal_cases",
+          type: "fill",
+          source: {
+            type: "geojson",
+            data: "data/simplified_municipalities.geojson",
+          },
+          minzoom: 7,
+          "paint": {
+            "fill-color": {
+                property: "covid_cases",
+                stops: [[0, '#004c6d'],
+                [25001, '#09435f'],
+                [50001, '#0e3a51'],
+                [75001, '#103144'],
+                [100001, '#112837'],
+                [125001, '#10202b'],
+                [150001, '#0e181f'],
+                [175001, '#080e13'],
+                [200001, '#000000']]
+            }
+        }
+        },
+        "municipal_outline"
+      );
   });
+
+  
 
 
 // Create the popup
@@ -115,7 +165,6 @@ map.on('click', 'cities_cases', function (e) {
     var provinceName = e.features[0].properties.adm2_en;
     var covidCases = e.features[0].properties.covid_cases;
     regionName = regionName.toUpperCase();
-    provinceName = provinceName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<h4>' + provinceName + ' - ' + regionName + '</h4>'
@@ -127,4 +176,22 @@ map.on('mouseenter', 'cities_cases', function () {
 });
 map.on('mouseleave', 'cities_cases', function () {
     map.getCanvas().style.cursor = '';
+});
+
+map.on('click', 'municipal_cases', function (e) {
+  var provinceName = e.features[0].properties.province;
+  var municipalName = e.features[0].properties.municipality;
+  var covidCases = e.features[0].properties.covid_cases;
+  provinceName = provinceName.toUpperCase();
+  new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<h4>' + provinceName + ' - ' + municipalName + '</h4>'
+          + '<h2>' + covidCases + '</h2>')
+      .addTo(map);
+});
+map.on('mouseenter', 'municipal_cases', function () {
+  map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'municipal_cases', function () {
+  map.getCanvas().style.cursor = '';
 });
