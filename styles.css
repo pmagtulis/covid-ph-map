@@ -11,14 +11,6 @@ body {
     margin-top: 2px;
 }
 
-#map2 {
-    width: 90%;
-    height: 600px;
-    margin: 5em auto;
-    margin-bottom: 2px;
-    margin-top: 2px;
-}
-
 .mapboxgl-popup-content h4 {
     font-weight: 300;
     font-size: 0.9em;
