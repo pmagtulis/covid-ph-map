@@ -143,12 +143,12 @@ map.on("load", function () {
 // Create the popup
 map.on('click', 'regions_cases', function (e) {
     var regionName = e.features[0].properties.regions;
-    var covidCases = e.features[0].properties.covid_cases;
+    var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
     regionName = regionName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<h4>'+regionName+'</h4>'
-            +'<h2>'+covidCases+'</h2>')
+        .setHTML('<h2>'+ '<strong>' + regionName + '</strong>' + '</h2>'
+            +'<h1>'+covidCases+'</h1>')
         .addTo(map);
 });
 // Change the cursor to a pointer when the mouse is over the us_states_elections layer.
@@ -163,12 +163,12 @@ map.on('mouseleave', 'regions_cases', function () {
 map.on('click', 'cities_cases', function (e) {
     var regionName = e.features[0].properties.adm1_en;
     var provinceName = e.features[0].properties.adm2_en;
-    var covidCases = e.features[0].properties.covid_cases;
+    var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
     regionName = regionName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<h4>' + provinceName + ' - ' + regionName + '</h4>'
-            + '<h2>' + covidCases + '</h2>')
+        .setHTML('<h2>' + '<strong>' + provinceName + '</strong>' + ' - ' + regionName + '</h2>'
+            + '<h1>' + covidCases + '</h1>')
         .addTo(map);
 });
 map.on('mouseenter', 'cities_cases', function () {
@@ -181,11 +181,11 @@ map.on('mouseleave', 'cities_cases', function () {
 map.on('click', 'municipal_cases', function (e) {
   var provinceName = e.features[0].properties.province;
   var municipalName = e.features[0].properties.municipality;
-  var covidCases = e.features[0].properties.covid_cases;
+  var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
   provinceName = provinceName.toUpperCase();
   new mapboxgl.Popup()
       .setLngLat(e.lngLat)
-      .setHTML('<h4>' + provinceName + ' - ' + municipalName + '</h4>'
+      .setHTML('<h2>' + '<strong>' + municipalName + '</strong>' + ' - ' + provinceName + '</h2>'
           + '<h2>' + covidCases + '</h2>')
       .addTo(map);
 });
