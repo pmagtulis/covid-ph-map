@@ -7,4 +7,10 @@ This is an ongoing database project that tracks Covid-19 infections in the Phili
 
 # How does it work?
 
-The map can be found on this [website](https://pmagtulis.github.io/covid-ph-map/). Data used to make that map is available on this repo.
+The map can be found on this [website](https://pmagtulis.github.io/covid-ph-map/). Data and analysis used to make that map is available on this repo.
+
+# Contact
+
+Prinz Magtulis, [ppm2130@columbia.edu](mailto:ppm2130@columbia.edu)
+
+**Comments and suggestions are always welcome! All rights reserved.**
