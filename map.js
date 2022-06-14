@@ -186,7 +186,7 @@ map.on('click', 'municipal_cases', function (e) {
   new mapboxgl.Popup()
       .setLngLat(e.lngLat)
       .setHTML('<h2>' + '<strong>' + municipalName + '</strong>' + ' - ' + provinceName + '</h2>'
-          + '<h2>' + covidCases + '</h2>')
+          + '<h1>' + covidCases + '</h1>')
       .addTo(map);
 });
 map.on('mouseenter', 'municipal_cases', function () {
