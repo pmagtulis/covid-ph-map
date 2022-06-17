@@ -33,16 +33,16 @@ map.on("load", function () {
       minzoom: 4,
       "paint": {
         "fill-color": {
-            property: "covid_cases",
+            property: "case_per_pop",
             stops: [[0, '#f2e926'],
-                    [100000, '#efd124'],
-                    [200000, '#ebb822'],
-                    [300000, '#e8a01f'],
-                    [400000, '#e5871d'],
-                    [500000, '#e16f1b'],
-                    [600000, '#de5619'],
-                    [700000, '#db3e16'],
-                    [800000, '#d72514']]
+                    [1000, '#efd124'],
+                    [2000, '#ebb822'],
+                    [3000, '#e8a01f'],
+                    [4000, '#e5871d'],
+                    [5000, '#e16f1b'],
+                    [6000, '#de5619'],
+                    [7000, '#db3e16'],
+                    [8000, '#d72514']]
         }
     }
     }, "waterway-label");
@@ -143,12 +143,14 @@ map.on("load", function () {
 // Create the popup
 map.on('click', 'regions_cases', function (e) {
     var regionName = e.features[0].properties.regions;
+    var casePerPop = e.features[0].properties.case_per_pop.toLocaleString('en-US');
     var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
     regionName = regionName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<h2>'+ '<strong>' + regionName + '</strong>' + '</h2>'
-            +'<h1>'+covidCases+'</h1>')
+            + '<h2>' + 'Number of cases:' + " " + covidCases + '</h2>'
+            +'<h1>' + 'Case per 100,000:' + " " + '<strong>' + casePerPop + '</strong>' + '</h1>')
         .addTo(map);
 });
 // Change the cursor to a pointer when the mouse is over the us_states_elections layer.
