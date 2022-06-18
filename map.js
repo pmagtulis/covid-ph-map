@@ -76,16 +76,16 @@ map.on("load", function () {
           maxzoom: 7,
           "paint": {
             "fill-color": {
-                property: "covid_cases",
+                property: "case_per_pop",
                 stops: [[0, '#f2e926'],
-                [50000, '#efd124'],
-                [100000, '#ebb822'],
-                [150000, '#e8a01f'],
-                [200000, '#e5871d'],
-                [250000, '#e16f1b'],
-                [300000, '#de5619'],
-                [350000, '#db3e16'],
-                [400000, '#d72514']]
+                [1000, '#efd124'],
+                [2000, '#ebb822'],
+                [3000, '#e8a01f'],
+                [4000, '#e5871d'],
+                [5000, '#e16f1b'],
+                [6000, '#de5619'],
+                [7000, '#db3e16'],
+                [8000, '#d72514']]
             }
         }
         },
@@ -164,13 +164,15 @@ map.on('mouseleave', 'regions_cases', function () {
 
 map.on('click', 'cities_cases', function (e) {
     var regionName = e.features[0].properties.adm1_en;
-    var provinceName = e.features[0].properties.adm2_en;
+    var casePerPop = e.features[0].properties.case_per_pop.toLocaleString('en-US');
+    var provinceName = e.features[0].properties.province;
     var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
     regionName = regionName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<h2>' + '<strong>' + provinceName + '</strong>' + ' - ' + regionName + '</h2>'
-            + '<h1>' + covidCases + '</h1>')
+        .setHTML('<h2>'+ '<strong>' + provinceName + '</strong>' + '-' + regionName + '</h2>'
+            + '<h2>' + 'Number of cases:' + " " + covidCases + '</h2>'
+            +'<h1>' + 'Case per 100,000:' + " " + '<strong>' + casePerPop + '</strong>' + '</h1>')
         .addTo(map);
 });
 map.on('mouseenter', 'cities_cases', function () {
