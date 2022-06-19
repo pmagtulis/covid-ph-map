@@ -10,6 +10,7 @@ var map = new mapboxgl.Map({
 });
 
 map.on("load", function () {
+  map.resize();
     map.addLayer({
       id: "regions_outline",
       type: "line",
