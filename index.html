@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://pmagtulis.github.io/assets/ppm.ico" />
     <title>Covid-19 in the Philippines</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -89,23 +90,31 @@
     <div class="container">
     <section class="section">
         <p class="title is-3 has-text-centered">Covid-19 in the Philippines</p>
-        <p class="has-text-centered"><em>June 11, 2022</em></p>
+        <p class="has-text-centered"><em>Database inspired by the New York Times</em></p>
     </div>
-
-<div class="container column is-half-desktop is-full-mobile is-full-tablet">
-    <div class="block">
-        The map below shows the state of Covid-19 in the Philippines <strong>as of May 29</strong>, the period on which <a href="https://doh.gov.ph/covid19tracker" target="_blank">granular case data</a> is available.
+<div class="container column is-full-desktop is-full-mobile is-full-tablet">
+  <div id="text">
+    <p class="title is-5"></strong>Daily cases</strong></p>
+  </div>
+  <br>
+  <div id="single-line">
+    <script type='text/javascript' src="rolling-cases.js"></script>
+  </div>
+</div>
+  <div class="columns">
+    <div class="column is-one-third">
+      <script type='text/javascript' src="positive_rates.js"></script>
     </div>
-    <div class="block">
-       By region, the dense National Capital Region corners majority of the cases.
+    <div class="column is-one-third">
+      <script type='text/javascript' src="testing.js"></script>
     </div>
-    </div>
-    <div class="container column is-full-desktop is-full-mobile is-full-tablet"></div>
+  </div>
+  <div class="container column is-full-desktop is-full-mobile is-full-tablet">
     <div id='map'>
       <div id='legend-title' class="legend-title">
         <div class="legend">
             <p class="title is-5">Covid-19 in the Philippines</p>
-            <p> As of May 29, the Southeast Asian country has recorded <strong>3,690,253 Covid-19 cases</strong>. Nearly 32% of those cases were detected in Metro Manila or the National Capital Region.</p>
+            <p class="subtitle is-6">as of June 18</p>
             <br>
             <p>Zoom in and click the map on the right to show regional, provincial and municipal level of data. Colors represent <strong>cases per certain number of population. </strong>The <strong>darker</strong> the shade, the higher the cases in the area. </p>
             <br>
@@ -124,10 +133,7 @@
   <div class="block">
     Another repository containing other Covid-19 figures, including tests and positivity rates, can be found <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank">here</a>.
 </div>
-  <div class="block">
-    This map aims to integrate more Covid-19 relevant data in succeeding updates.
-   </div>
-  </div>
+</div>
 
 
 

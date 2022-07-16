@@ -31,6 +31,13 @@ body {
     margin-bottom: 0em;
 }
 
+#single-line {
+    fill: none;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-width: 3;
+}
+
 .legend-title {
 	background-color: #ffffff;
 	opacity: 0.9;
