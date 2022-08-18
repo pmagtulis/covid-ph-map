@@ -91,7 +91,8 @@ map.on("load", function () {
               "6001-7000", "#de5619",
               "7001-8000", "#db3e16",
               "8001-9000", "#ea3322",
-              "9001-10500", "#d72514",
+              "9001-10000", "#d72514",
+              "10001-11000", "#91260d",
               "#ffffff",
             ],
         }
@@ -175,7 +176,7 @@ map.on('click', 'cities_cases', function (e) {
     var regionName = e.features[0].properties.adm1_en;
     var casePerPop = e.features[0].properties.case_per_pop.toLocaleString('en-US');
     var provinceName = e.features[0].properties.province;
-    var covidCases = e.features[0].properties.covid_cases.toLocaleString('en-US');
+    var covidCases = e.features[0].properties.cases.toLocaleString('en-US');
     regionName = regionName.toUpperCase();
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
