@@ -1,154 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://pmagtulis.github.io/assets/ppm.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://pmagtulis.github.io/assets/ppm.ico"
+    />
     <title>Covid-19 in the Philippines</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <meta property="og:title" content="Covid-19 in the Philippines">
-	<meta property="og:description" content="Mapping the pandemic crisis.">
-	<meta property="og:type" content="article">
-	<meta property="og:image" content="https://pmagtulis.github.io/assets/covid_map.png">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:creator" content="@prinzmagtulis">
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:title" content="Covid-19 in the Philippines" />
+    <meta property="og:description" content="Mapping the pandemic." />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://pmagtulis.github.io/assets/covid_map.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@prinzmagtulis" />
+  </head>
 
-<style>
-
-  html, body {
-    overflow-x: hidden;
-  }
-    
-  body {
-    position: relative;
-  }
-
-  .footer {
-    padding:8px;
-    margin-top:12px;
-  }
-
-  .section {
-    padding:3px;
-    margin-top:12px;
-  }
-          
- </style>
-
-</head>
-
-<body>
-
+  <body>
     <!-- nav bar -->
-	
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-start">
-        <div class="navbar-item">
+    <nav class="navbar navbar-expand-xl bg-dark">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand text-white"
+          href="https://pmagtulis.github.io/econ-database/"
+          >Covid-19 in the Philippines</a
+        >
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          id="burger"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- social media -->
           <div class="share-btn-container">
             <a href="#" class="facebook-btn">
               <i class="fab fa-facebook"></i>
-          </a>
+            </a>
             <a href="#" class="twitter-btn">
               <i class="fab fa-twitter"></i>
-          </a>
+            </a>
             <a href="#" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
-          </a>
+            </a>
             <a href="#" class="whatsapp-btn">
               <i class="fab fa-whatsapp"></i>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <a class="navbar-burger" aria-label="menu" aria-expanded="false" id="burger">
-      <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-    </a>
-</div>
-  
-    <div class="navbar-menu" id="nav-links">
-      <div class="navbar-end">
-        <a class="navbar-item" href="https://pmagtulis.github.io/projects/">
-              Back to projects page
-        </a>
-        <a class="navbar-item" href="https://pmagtulis.github.io/">
-          Back to homepage
-          </a>
-      </div>
-  </div>
-</nav>
+    </nav>
 
-<!-- main -->  
+    <br />
+
+    <!-- main -->
     <div class="container">
-    <section class="section">
-        <p class="title is-3 has-text-centered">Covid-19 in the Philippines</p>
-        <p class="has-text-centered"><em>Database inspired by the New York Times</em></p>
-    </div>
-<div class="container column is-full-desktop is-full-mobile is-full-tablet">
-  <div id="text">
-    <p class="title is-5"></strong>Daily cases</strong></p>
-  </div>
-  <br>
-  <div id="single-line">
-    <script type='text/javascript' src="rolling-cases.js"></script>
-  </div>
-</div>
-  <div class="columns">
-    <div class="column is-one-third">
-      <script type='text/javascript' src="positive_rates.js"></script>
-    </div>
-    <div class="column is-one-third">
-      <script type='text/javascript' src="testing.js"></script>
-    </div>
-  </div>
-  <div class="container column is-full-desktop is-full-mobile is-full-tablet">
-    <div id='map'>
-      <div id='legend-title' class="legend-title">
-        <div class="legend">
-            <p class="title is-5">Covid-19 in the Philippines</p>
-            <p class="subtitle is-6">as of August 6</p>
-            <br>
-            <p>Zoom in and click the map on the right to show regional, provincial and municipal level of data. Colors represent <strong>cases per certain number of population. </strong>The <strong>darker</strong> the shade, the higher the cases in the area. </p>
-            <br>
-            <p>Note that there were over 9,100 cases with no indicated municipal location. There were also some municipalities, which had no available data.</p>
-            <br>
-            <p>Source: Department of Health</p>
+      <div class="row">
+        <h2 class="title is-3">Covid-19 in the Philippines</h2>
+        <p>as of January 21, 2023</p>
+      </div>
+
+      <br />
+
+      <div class="container">
+        <div id="text">
+          <h6 class="title is-6"><strong>Daily cases</strong></h6>
+        </div>
+        <br />
+        <div id="single-line">
+          <script type="text/javascript" src="../js/rolling-cases.js"></script>
         </div>
       </div>
-      <script type='text/javascript' src="map.js"></script>
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <script type="text/javascript" src="../js/positive_rates.js"></script>
+        </div>
+        <div class="column is-one-third">
+          <script type="text/javascript" src="../js/testing.js"></script>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="map">
+          <div id="legend-title" class="legend-title">
+            <div class="legend">
+              <h4 class="title is-5">Covid-19 in the Philippines</h4>
+              <p class="subtitle is-6">as of Jan. 21, 2023</p>
+              <br />
+              <p>
+                Zoom in and click the map on the right to show regional,
+                provincial and municipal level of data. Colors represent
+                <strong>cases per certain number of population. </strong>The
+                <strong>darker</strong> the shade, the higher the cases in the
+                area.
+              </p>
+              <br />
+              <p>
+                Note that there were over 9,100 cases with no indicated
+                municipal location. There were also some municipalities, which
+                had no available data.
+              </p>
+              <br />
+              <p>Source: Department of Health</p>
+            </div>
+          </div>
+          <script type="text/javascript" src="../js/map.js"></script>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="block">
+          <h3>Covid-19 cases by region</h3>
+          <div id="regions"></div>
+        </div>
+
+        <hr />
+
+        <div class="block">
+          <h3>By province</h3>
+          <div id="provinces"></div>
+        </div>
+
+        <hr />
+
+        <div class="block">
+          <h3>By municipality</h3>
+          <div id="municipalities"></div>
+        </div>
+
+        <br />
+
+        <div class="block">
+          The repository containing processed Covid-19 data for this project can
+          be found
+          <a
+            href="https://github.com/pmagtulis/covid-ph-map.git"
+            target="_blank"
+            >here</a
+          >.
+        </div>
+        <div class="block">
+          Another repository containing other Covid-19 figures, including tests
+          and positivity rates, can be found
+          <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank"
+            >here</a
+          >.
+        </div>
+      </div>
     </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.js" , type="application/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script
+      src="../js/csv_to_table.js"
+      ,
+      type="application/javascript"
+    ></script>
+    <script src="../js/socials.js"></script>
+    <script src="../js/mobile.js"></script>
+
+    <!-- CSV tables-->
+    <script>
+      CsvToHtmlTable.init({
+        csv_path: '../notebooks/regions.csv',
+        element: 'regions',
+        allow_download: true,
+        csv_options: { separator: ',', delimiter: '"' },
+        datatables_options: { paging: true },
+      });
+    </script>
+
+    <script>
+      CsvToHtmlTable.init({
+        csv_path: '../notebooks/provinces-cases.csv',
+        element: 'provinces',
+        allow_download: true,
+        csv_options: { separator: ',', delimiter: '"' },
+        datatables_options: { paging: true },
+      });
+    </script>
+
+    <script>
+      CsvToHtmlTable.init({
+        csv_path: '../notebooks/municipalities.csv',
+        element: 'municipalities',
+        allow_download: true,
+        csv_options: { separator: ',', delimiter: '"' },
+        datatables_options: { paging: true },
+      });
+    </script>
+  </body>
+
+  <footer class="footer expand-xl bg-dark text-center text-white">
+    <!-- Copyright -->
+    <div class="container-fluid text-center p-2">
+      © 2022 Copyright:
+      <a class="text-white" href="https://pmagtulis.github.io/"
+        >Prinz Magtulis</a
+      >
     </div>
-    <div class="container column is-half-desktop is-full-mobile is-full-tablet">
-    <div class="block">
-       The repository containing processed Covid-19 data for this project can be found <a href="https://github.com/pmagtulis/covid-ph-map.git" target="_blank">here</a>.
-  </div>
-  <div class="block">
-    Another repository containing other Covid-19 figures, including tests and positivity rates, can be found <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank">here</a>.
-</div>
-</div>
-
-
-
-  <script src="https://pmagtulis.github.io/covid-ph-map/socials.js"></script>
-	<script src="https://pmagtulis.github.io/covid-ph-map/mobile.js"></script>
-
-</body>
-
-<footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        Made using Bulma by <a href="mailto:ppm2130@columbia.edu">Prinz Magtulis</a>. Copyright 2022.
-      </p>
-    </div>
-</div>
+    <!-- Copyright -->
   </footer>
-</section>
 </html>
