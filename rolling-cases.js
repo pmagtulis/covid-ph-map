@@ -1,8 +1,8 @@
 ;(function () {
-    const margin = { top: 20, right: 50, bottom: 50, left: 70 }
+    const margin = { top: 20, right: 25, bottom: 70, left: 60 }
 
-    const width = 1000 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom
+    const width = 1200 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom
 
     const svg = d3
         .select("#single-line")
@@ -49,20 +49,21 @@
     
             svg.append("path")
                 .datum(datapoints)
-                .attr("fill", "red")
+                .attr("fill", "#d72514")
                 .attr("class", "area")
-                .attr("fill-opacity", .3)
+                .attr("fill-opacity", .4)
                 .attr("d", area);
     
             svg.append("path")
                 .datum(datapoints)
-                .attr("stroke", "red")
+                .attr("stroke", "#d72514")
+                .attr("stroke-linecap", "round")
                 .attr("stroke-width", 2)
                 .attr("fill", "none")
                 .attr("d", line)
     
             const yAxis = d3.axisLeft(yPositionScale)
-                .tickSize(10,0) // size of ticks
+                .tickSize(5,0) // size of ticks
                 .tickPadding([5]);
     
             svg.append("g").attr("class", "axis y-axis")
@@ -72,9 +73,9 @@
                 .call(yAxis)
     
             const xAxis = d3.axisBottom(xPositionScale)
-                .ticks(5)
+                .ticks(4)
                 .tickFormat(d3.timeFormat("%B %Y"))
-                .tickSize(10,0) // size of ticks
+                .tickSize(5,0) // size of ticks
                 .tickPadding([15]);
     
             svg.append("g")

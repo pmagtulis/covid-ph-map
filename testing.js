@@ -2,7 +2,7 @@
     const margin = { top: 20, right: 50, bottom: 50, left: 70 }
 
     const width = 400 - margin.left - margin.right,
-        height = 200 - margin.top - margin.bottom
+        height = 250 - margin.top - margin.bottom
 
     const svg = d3
         .select("#single-line")
@@ -49,14 +49,14 @@
 
         svg.append("path")
             .datum(datapoints)
-            .attr("fill", "grey")
+            .attr("fill", "#999999")
             .attr("class", "area")
             .attr("fill-opacity", .3)
             .attr("d", area);
 
         svg.append("path")
             .datum(datapoints)
-            .attr("stroke", "black")
+            .attr("stroke", "#333333")
             .attr("stroke-width", 1.5)
             .attr("fill", "none")
             .attr("d", line)
@@ -91,7 +91,7 @@
             .attr("x", (width / 2))             
             .attr("y", 0 - (margin.top / 2))
             .attr("text-anchor", "middle")  
-            .style("font-size", "12px")
+            .style("font-size", "13px")
             .style("fill", "black") 
             .style("font-family", "roboto")
             .text("Individuals tested");

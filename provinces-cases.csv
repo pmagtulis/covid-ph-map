@@ -1,88 +1,88 @@
 Province,Region,Covid-19 cases,Case per population
-Abra,Cordillera Administrative Region,6323,2519.3
-Agusan del Norte,Region XIII,23441,3082.7
-Agusan del Sur,Region XIII,17683,2391.6
-Aklan,Region VI,17170,2789.7
-Albay,Region V,15373,1118.2
-Antique,Region VI,10554,1721.8
-Apayao,Cordillera Administrative Region,9547,7676.5
-Aurora,Region III,4433,1880.4
-Basilan,Bangsamoro Autonomous Region in Muslim Mindanao,1879,440.9
-Bataan,Region III,44544,5219.8
-Batanes,Region II,401,2129.5
-Batangas,Region IV-A,101406,3486.5
-Benguet,Cordillera Administrative Region,75245,9098.1
-Biliran,Region VIII,2445,1363.5
-Bohol,Region VII,26513,1901.5
-Bukidnon,Region X,33022,2142.5
-Bulacan,Region III,147626,3980.3
-Cagayan,Region II,66057,5207.1
-Camarines Norte,Region V,5272,837.2
-Camarines Sur,Region V,30543,1476.8
-Camiguin,Region X,2689,2897.4
-Capiz,Region VI,14556,1808.3
-Catanduanes,Region V,3958,1455.8
-Cavite,Region IV-A,239167,5504.6
-Cebu,Region VII,149198,2953.7
-City of Isabela,Region IX,1946,1492.6
-Davao de Oro,Region XI,10834,1411.5
-Cotabato,Region XII,16303,1093.7
-Cotabato City,Region XII,7036,2164.4
-Davao del Norte,Region XI,27244,2421.6
-Davao del Sur,Region XI,98019,3988.7
-Davao Occidental,Region XI,5089,1604.6
-Davao Oriental,Region XI,10046,1743.1
-Dinagat Islands,Region XIII,1799,1404.2
-Eastern Samar,Region VIII,5286,1107.8
-Guimaras,Region VI,4384,2333.9
-Ifugao,Cordillera Administrative Region,12225,5891.6
-Ilocos Norte,Region I,27596,4527.0
-Ilocos Sur,Region I,23792,3369.9
-Iloilo,Region VI,89873,3581.3
-Isabela,Region II,72594,4277.7
-Kalinga,Cordillera Administrative Region,12554,5468.5
-La Union,Region I,32015,3893.1
-Laguna,Region IV-A,178899,5289.4
-Lanao del Norte,Region X,13015,1198.4
-Lanao del Sur,Bangsamoro Autonomous Region in Muslim Mindanao,8300,694.3
-Leyte,Region VIII,37351,1841.1
-Maguindanao,Bangsamoro Autonomous Region in Muslim Mindanao,7788,580.3
-Marinduque,Region IV-B,5253,2196.0
-Masbate,Region V,6544,720.0
-Misamis Occidental,Region X,12780,2070.2
-Misamis Oriental,Region X,50066,2970.7
-Mountain Province,Cordillera Administrative Region,11159,7053.7
-"NCR, City of Manila, First District",National Capital Region,161656,8754.7
-"NCR, Fourth District",National Capital Region,437853,11337.6
-"NCR, Second District",National Capital Region,484840,10161.4
-"NCR, Third District",National Capital Region,195354,6501.8
-Negros Occidental,Region VI,76068,2359.5
-Negros Oriental,Region VII,26501,1849.3
-Northern Samar,Region VIII,5176,809.8
-Nueva Ecija,Region III,45455,1967.6
-Nueva Vizcaya,Region II,23379,4699.9
-Occidental Mindoro,Region IV-B,8639,1644.4
-Oriental Mindoro,Region IV-B,13507,1487.0
-Palawan,Region IV-B,14201,1139.1
-Pampanga,Region III,96040,3311.0
-Pangasinan,Region I,60207,1903.4
-Quezon,Region IV-A,41051,1841.4
-Quirino,Region II,8659,4248.2
-Rizal,Region IV-A,155810,4678.8
-Romblon,Region IV-B,5723,1852.2
-Samar,Region VIII,9576,1207.3
-Sarangani,Region XII,8857,1584.6
-Siquijor,Region VII,3000,2901.5
-Sorsogon,Region V,9677,1167.8
-South Cotabato,Region XII,45545,2722.7
-Southern Leyte,Region VIII,6818,1587.2
-Sultan Kudarat,Region XII,10358,1212.8
-Sulu,Bangsamoro Autonomous Region in Muslim Mindanao,1691,169.1
-Surigao del Norte,Region XIII,7640,1429.0
-Surigao del Sur,Region XIII,14917,2322.6
-Tarlac,Region III,32911,2189.0
-Tawi-Tawi,Bangsamoro Autonomous Region in Muslim Mindanao,774,175.8
-Zambales,Region III,23688,2603.6
-Zamboanga del Norte,Region IX,13193,1259.5
-Zamboanga del Sur,Region IX,48619,2397.5
-Zamboanga Sibugay,Region IX,5777,862.4
+Abra,Cordillera Administrative Region,6454,2571.5
+Agusan del Norte,Region XIII,23642,3109.1
+Agusan del Sur,Region XIII,17961,2429.2
+Aklan,Region VI,17389,2825.3
+Albay,Region V,15600,1134.7
+Antique,Region VI,11070,1805.9
+Apayao,Cordillera Administrative Region,9622,7736.8
+Aurora,Region III,4482,1901.2
+Basilan,Bangsamoro Autonomous Region in Muslim Mindanao,1911,448.4
+Bataan,Region III,45091,5283.9
+Batanes,Region II,406,2156.0
+Batangas,Region IV-A,102744,3532.5
+Benguet,Cordillera Administrative Region,77194,9333.8
+Biliran,Region VIII,2490,1388.6
+Bohol,Region VII,26832,1924.4
+Bukidnon,Region X,33649,2183.1
+Bulacan,Region III,149620,4034.1
+Cagayan,Region II,67379,5311.3
+Camarines Norte,Region V,5494,872.5
+Camarines Sur,Region V,31177,1507.4
+Camiguin,Region X,2748,2961.0
+Capiz,Region VI,14852,1845.1
+Catanduanes,Region V,4033,1483.4
+Cavite,Region IV-A,242706,5586.1
+Cebu,Region VII,152435,3017.8
+City of Isabela,Region IX,1973,1513.3
+Davao de Oro,Region XI,10842,1412.6
+Cotabato,Region XII,16339,1096.1
+Cotabato City,Region XII,7043,2166.6
+Davao del Norte,Region XI,27526,2446.6
+Davao del Sur,Region XI,99954,4067.4
+Davao Occidental,Region XI,5114,1612.4
+Davao Oriental,Region XI,10250,1778.5
+Dinagat Islands,Region XIII,1815,1416.7
+Eastern Samar,Region VIII,5349,1121.0
+Guimaras,Region VI,4459,2373.8
+Ifugao,Cordillera Administrative Region,12340,5947.0
+Ilocos Norte,Region I,28251,4634.4
+Ilocos Sur,Region I,24193,3426.7
+Iloilo,Region VI,91938,3663.6
+Isabela,Region II,74106,4366.8
+Kalinga,Cordillera Administrative Region,12920,5627.9
+La Union,Region I,32857,3995.5
+Laguna,Region IV-A,181757,5373.9
+Lanao del Norte,Region X,13245,1219.6
+Lanao del Sur,Bangsamoro Autonomous Region in Muslim Mindanao,8606,719.9
+Leyte,Region VIII,37875,1866.9
+Maguindanao,Bangsamoro Autonomous Region in Muslim Mindanao,8082,602.2
+Marinduque,Region IV-B,5352,2237.4
+Masbate,Region V,6660,732.7
+Misamis Occidental,Region X,12988,2103.9
+Misamis Oriental,Region X,51027,3027.8
+Mountain Province,Cordillera Administrative Region,11374,7189.6
+"NCR, City of Manila, First District",National Capital Region,165047,8938.3
+"NCR, Fourth District",National Capital Region,446010,11548.8
+"NCR, Second District",National Capital Region,493575,10344.5
+"NCR, Third District",National Capital Region,198085,6592.7
+Negros Occidental,Region VI,78102,2422.6
+Negros Oriental,Region VII,26942,1880.1
+Northern Samar,Region VIII,5234,818.9
+Nueva Ecija,Region III,46445,2010.5
+Nueva Vizcaya,Region II,24031,4831.0
+Occidental Mindoro,Region IV-B,8668,1649.9
+Oriental Mindoro,Region IV-B,13644,1502.1
+Palawan,Region IV-B,14492,1162.5
+Pampanga,Region III,97199,3351.0
+Pangasinan,Region I,61479,1943.6
+Quezon,Region IV-A,41692,1870.1
+Quirino,Region II,8895,4364.0
+Rizal,Region IV-A,158516,4760.0
+Romblon,Region IV-B,5761,1864.5
+Samar,Region VIII,9582,1208.0
+Sarangani,Region XII,8963,1603.6
+Siquijor,Region VII,3033,2933.4
+Sorsogon,Region V,9828,1186.0
+South Cotabato,Region XII,46088,2755.2
+Southern Leyte,Region VIII,6864,1597.9
+Sultan Kudarat,Region XII,10523,1232.1
+Sulu,Bangsamoro Autonomous Region in Muslim Mindanao,1723,172.3
+Surigao del Norte,Region XIII,7730,1445.8
+Surigao del Sur,Region XIII,15359,2391.4
+Tarlac,Region III,33880,2253.5
+Tawi-Tawi,Bangsamoro Autonomous Region in Muslim Mindanao,785,178.3
+Zambales,Region III,23968,2634.3
+Zamboanga del Norte,Region IX,13518,1290.6
+Zamboanga del Sur,Region IX,49390,2435.5
+Zamboanga Sibugay,Region IX,5878,877.5
