@@ -18,8 +18,8 @@ body {
 #small-multiples {
   display: flex;
   max-width: 100%;
-  flex-wrap:wrap;
-  justify-content:flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
@@ -136,7 +136,6 @@ a.page-link:hover {
 .share-btn-container a i {
   font-size: 24px;
   margin: 8px auto;
-  transition: 500ms;
   padding: 8px;
 }
 
@@ -168,7 +167,7 @@ a.page-link:hover {
   visibility: hidden;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .legend-title {
     background-color: #ffffff;
     opacity: 0.9;
@@ -188,7 +187,42 @@ a.page-link:hover {
     font-size: 12px;
   }
 
-  .body {
-    overflow: auto;
+  h4 {
+    font-size: 20px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  a.page-link {
+    font-size: 13px;
+  }
+
+  a.btn.btn-info {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .dataTables_info {
+    font-size: 13px;
+  }
+
+  #single-line {
+    margin-left: -20px;
+  }
+
+  #single-line > img,
+  svg {
+    margin-bottom: 2em;
+  }
+
+  #small-multiples {
+    transform: translate(10%);
+    align-items: center;
+  }
+
+  .container > .mapboxgl-map {
+    margin-top: 0 auto;
   }
 }
