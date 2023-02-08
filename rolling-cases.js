@@ -73,7 +73,7 @@
                 .call(yAxis)
     
             const xAxis = d3.axisBottom(xPositionScale)
-                .ticks(4)
+                .ticks(3)
                 .tickFormat(d3.timeFormat("%B %Y"))
                 .tickSize(5,0) // size of ticks
                 .tickPadding([15]);

@@ -12,6 +12,7 @@
     <title>Covid-19 in the Philippines | Prinz Magtulis</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css"
       rel="stylesheet"
@@ -88,92 +89,93 @@
 
     <!-- main -->
     <div class="container">
-      <div class="row">
-        <h2 class="title is-3">Covid-19 in the Philippines</h2>
-        <p>as of January 16, 2023</p>
+      <div id="text">
+        <h4>Daily cases</h4>
+        <p>as of January 21, 2023</p>
+      </div>
+      <br />
+      <div id="single-line">
+        <script type="text/javascript" src="rolling-cases.js"></script>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-one-third">
+        <script type="text/javascript" src="positive_rates.js"></script>
+      </div>
+      <div class="column is-one-third">
+        <script type="text/javascript" src="testing.js"></script>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="map">
+        <div id="legend-title" class="legend-title">
+          <div class="legend">
+            <h4 class="title is-5">Mapping the Covid-19 pandemic</h4>
+            <p class="subtitle is-6">as of Jan. 21, 2023</p>
+            <br />
+            <p>
+              Zoom in and click the map on the right to show regional,
+              provincial and municipal level of data. Colors represent
+              <strong>cases per specific number of population. </strong>The
+              <strong>darker</strong> the shade, the higher the cases in the
+              area.
+            </p>
+            <br />
+            <p>Source: Department of Health</p>
+          </div>
+        </div>
+        <script type="text/javascript" src="map.js"></script>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="block">
+        <h4>Covid-19 cases by region</h4>
+        <div id="regions"></div>
       </div>
 
       <br />
 
-      <div class="container">
-        <div id="text">
-          <h6 class="title is-6"><strong>Daily cases</strong></h6>
-        </div>
-        <br />
-        <div id="single-line">
-          <script type="text/javascript" src="rolling-cases.js"></script>
-        </div>
+      <div class="block">
+        <h5>Trends</h5>
+        <p>Number of confirmed cases</p>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-third">
-          <script type="text/javascript" src="positive_rates.js"></script>
-        </div>
-        <div class="column is-one-third">
-          <script type="text/javascript" src="testing.js"></script>
-        </div>
+      <div id="small-multiples">
+        <script type="text/javascript" src="small-multiples.js"></script>
       </div>
 
-      <div class="container">
-        <div id="map">
-          <div id="legend-title" class="legend-title">
-            <div class="legend">
-              <h4 class="title is-5">Mapping the Covid-19 pandemic</h4>
-              <p class="subtitle is-6">as of Jan. 16, 2023</p>
-              <br />
-              <p>
-                Zoom in and click the map on the right to show regional,
-                provincial and municipal level of data. Colors represent
-                <strong>cases per specific number of population. </strong>The
-                <strong>darker</strong> the shade, the higher the cases in the
-                area.
-              </p>
-              <br />
-              <p>Source: Department of Health</p>
-            </div>
-          </div>
-          <script type="text/javascript" src="map.js"></script>
-        </div>
+      <hr />
+
+      <div class="block" style="clear: both">
+        <h4>By province</h4>
+        <div id="provinces"></div>
       </div>
 
-      <div class="container">
-        <div class="block">
-          <h3>Covid-19 cases by region</h3>
-          <div id="regions"></div>
-        </div>
+      <hr />
 
-        <hr />
+      <div class="block">
+        <h4>By municipality</h4>
+        <div id="municipalities"></div>
+      </div>
 
-        <div class="block">
-          <h3>By province</h3>
-          <div id="provinces"></div>
-        </div>
+      <br />
 
-        <hr />
-
-        <div class="block">
-          <h3>By municipality</h3>
-          <div id="municipalities"></div>
-        </div>
-
-        <br />
-
-        <div class="block">
-          The repository containing processed Covid-19 data for this project can
-          be found
-          <a
-            href="https://github.com/pmagtulis/covid-ph-map.git"
-            target="_blank"
-            >here</a
-          >.
-        </div>
-        <div class="block">
-          Another repository containing other Covid-19 figures, including tests
-          and positivity rates, can be found
-          <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank"
-            >here</a
-          >.
-        </div>
+      <div class="block">
+        The repository containing processed Covid-19 data for this project can
+        be found
+        <a href="https://github.com/pmagtulis/covid-ph-map.git" target="_blank"
+          >here</a
+        >.
+      </div>
+      <div class="block">
+        Another repository containing other Covid-19 figures, including tests
+        and positivity rates, can be found
+        <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank"
+          >here</a
+        >.
       </div>
     </div>
 

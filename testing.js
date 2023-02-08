@@ -1,8 +1,8 @@
 ;(function () {
-    const margin = { top: 20, right: 50, bottom: 50, left: 70 }
+    const margin = { top: 20, right: 30, bottom: 30, left: 70 }
 
     const width = 400 - margin.left - margin.right,
-        height = 250 - margin.top - margin.bottom
+        height = 200 - margin.top - margin.bottom
 
     const svg = d3
         .select("#single-line")
@@ -77,7 +77,7 @@
             .tickFormat(d3.timeFormat("%Y"))
             .tickSize(5,0) // size of ticks
             .ticks(2)
-			.tickPadding([15]);
+			.tickPadding([10]);
 
         svg.append("g")
             .attr("class", "axis x-axis")
@@ -91,7 +91,7 @@
             .attr("x", (width / 2))             
             .attr("y", 0 - (margin.top / 2))
             .attr("text-anchor", "middle")  
-            .style("font-size", "13px")
+            .style("font-size", "14px")
             .style("fill", "black") 
             .style("font-family", "roboto")
             .text("Individuals tested");
