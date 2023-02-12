@@ -16,7 +16,7 @@
     .x((d) => xPositionScale(d.date))
     .y((d) => yPositionScale(d['Case per 100,000']));
 
-  d3.csv('data/regional cases.csv')
+  d3.csv('../data/regional cases.csv')
     .then(ready)
     .catch(function (error) {
       console.log('Failed with', error);
