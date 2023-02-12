@@ -29,7 +29,7 @@
 
     console.log(area);
 
-    d3.csv("/data/positivity_rates.csv")
+    d3.csv("data/positivity_rates.csv")
         .then(ready)
         .catch(function (error) {
             console.log("Failed with", error)
