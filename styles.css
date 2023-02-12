@@ -171,7 +171,7 @@ a.page-link:hover {
   .legend-title {
     background-color: #ffffff;
     opacity: 0.9;
-    border-radius: 0em;
+    border-radius: 1em;
     top: -200px;
     left: 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -189,6 +189,11 @@ a.page-link:hover {
 
   h4 {
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h5 {
+    font-family: 'Roboto', sans-serif;
   }
 
   .table {
@@ -212,14 +217,17 @@ a.page-link:hover {
     margin-left: -20px;
   }
 
-  #single-line > img,
+  #single-line,
+  img,
   svg {
     margin-bottom: 2em;
+    width: 365px;
   }
 
   #small-multiples {
-    transform: translate(10%);
+    transform: translate(5%);
     align-items: center;
+    font-family: 'Roboto', sans-serif;
   }
 
   .container > .mapboxgl-map {
