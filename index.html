@@ -91,20 +91,20 @@
     <div class="container">
       <div id="text">
         <h4>Daily cases</h4>
-        <p>as of January 21, 2023</p>
+        <p>as of February 4, 2023</p>
       </div>
       <br />
       <div id="single-line">
-        <script type="text/javascript" src="rolling-cases.js"></script>
+        <script type="text/javascript" src="../js/rolling-cases.js"></script>
       </div>
     </div>
 
     <div class="columns">
       <div class="column is-one-third">
-        <script type="text/javascript" src="positive_rates.js"></script>
+        <script type="text/javascript" src="../js/positive_rates.js"></script>
       </div>
       <div class="column is-one-third">
-        <script type="text/javascript" src="testing.js"></script>
+        <script type="text/javascript" src="../js/testing.js"></script>
       </div>
     </div>
 
@@ -113,7 +113,7 @@
         <div id="legend-title" class="legend-title">
           <div class="legend">
             <h4 class="title is-5">Mapping the Covid-19 pandemic</h4>
-            <p class="subtitle is-6">as of Jan. 21, 2023</p>
+            <p class="subtitle is-6">as of Feb. 4, 2023</p>
             <br />
             <p>
               Zoom in and click the map on the right to show regional,
@@ -124,7 +124,7 @@
             </p>
           </div>
         </div>
-        <script type="text/javascript" src="map.js"></script>
+        <script type="text/javascript" src="../js/map.js"></script>
       </div>
     </div>
 
@@ -138,11 +138,11 @@
 
       <div class="block">
         <h5>Trends</h5>
-        <p>Number of confirmed cases</p>
+        <p>Case per 100,000 people</p>
       </div>
 
       <div id="small-multiples">
-        <script type="text/javascript" src="small-multiples.js"></script>
+        <script type="text/javascript" src="../js/small-multiples.js"></script>
       </div>
 
       <hr />
@@ -175,6 +175,12 @@
           >here</a
         >.
       </div>
+
+      <br>
+
+      <div class="block">
+        Sources: Department of Health, UNOCHA
+      </div>
     </div>
 
     <!-- JS -->
@@ -194,7 +200,7 @@
     <!-- CSV tables-->
     <script>
       CsvToHtmlTable.init({
-        csv_path: 'regions.csv',
+        csv_path: 'data/regions.csv',
         element: 'regions',
         allow_download: true,
         csv_options: { separator: ',', delimiter: '"' },
@@ -204,7 +210,7 @@
 
     <script>
       CsvToHtmlTable.init({
-        csv_path: 'provinces-cases.csv',
+        csv_path: 'data/provinces-cases.csv',
         element: 'provinces',
         allow_download: true,
         csv_options: { separator: ',', delimiter: '"' },
@@ -214,7 +220,7 @@
 
     <script>
       CsvToHtmlTable.init({
-        csv_path: 'municipalities.csv',
+        csv_path: 'data/municipalities.csv',
         element: 'municipalities',
         allow_download: true,
         csv_options: { separator: ',', delimiter: '"' },
