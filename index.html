@@ -34,7 +34,7 @@
     ></script>
     <link rel="stylesheet" href="./styles.css" />
     <meta property="og:title" content="Covid-19 in the Philippines" />
-    <meta property="og:description" content="Mapping the pandemic." />
+    <meta property="og:description" content="Data, graphs and maps of the pandemic in the Philippines." />
     <meta property="og:type" content="article" />
     <meta
       property="og:image"
@@ -66,21 +66,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- social media -->
-          <div class="share-btn-container">
-            <a href="#" class="facebook-btn">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="twitter-btn">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="whatsapp-btn">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
+          <ul class="navbar-nav ms-auto">
+            <!-- social media -->
+            <div class="share-btn-container">
+              <a href="#" class="facebook-btn">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="twitter-btn">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="linkedin-btn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </ul>
         </div>
       </div>
     </nav>
@@ -91,7 +93,7 @@
     <div class="container">
       <div id="text">
         <h4>Daily cases</h4>
-        <p>as of February 4, 2023</p>
+        <p>as of February 4, 2023 (rolling 14-day averages)</p>
       </div>
       <br />
       <div id="single-line">
@@ -105,6 +107,9 @@
       </div>
       <div class="column is-one-third">
         <script type="text/javascript" src="js/testing.js"></script>
+      </div>
+      <div class="column is-one-third">
+        <script type="text/javascript" src="js/deaths.js"></script>
       </div>
     </div>
 
@@ -159,27 +164,49 @@
         <div id="municipalities"></div>
       </div>
 
-      <br />
+      <hr />
 
       <div class="block">
-        The repository containing processed Covid-19 data for this project can
-        be found
-        <a href="https://github.com/pmagtulis/covid-ph-map.git" target="_blank"
-          >here</a
-        >.
-      </div>
-      <div class="block">
-        Another repository containing other Covid-19 figures, including tests
-        and positivity rates, can be found
-        <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank"
-          >here</a
-        >.
-      </div>
+        <div id="note">
+          <p><strong>Notes:</strong></p>
 
-      <br>
+          <p>
+            Deaths by day data pertains to actual date when cases died from
+            Covid-19 and not when it is reported. This is different from actual
+            reported deaths by the Philippines' Department of Health every day.
+          </p>
 
-      <div class="block">
-        Sources: Department of Health, UNOCHA
+          <p>
+            Data here are collected and analyzed from the DOH's data drop and
+            updated accordingly. Most updated data are based on latest cases
+            tallied and not when DOH reported them.
+          </p>
+
+          <p>
+            Case per 100,000 people at regional level is daily and not rolling
+            average.
+          </p>
+
+          <p>
+            The repository containing processed Covid-19 data for this project
+            can be found
+            <a
+              href="https://github.com/pmagtulis/covid-ph-map.git"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+
+          <p>
+            Another repository containing other Covid-19 figures, including
+            tests and positivity rates, can be found
+            <a href="https://github.com/pmagtulis/covid-ph.git" target="_blank"
+              >here</a
+            >.
+          </p>
+
+          <p>Sources: Department of Health, UNOCHA</p>
+        </div>
       </div>
     </div>
 

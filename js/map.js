@@ -3,10 +3,10 @@ mapboxgl.accessToken =
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/pmagtulis07/cl47r8lhp001014n747gw9ltk',
-  zoom: 4,
-  maxZoom: 9,
-  minZoom: 3,
-  center: [121.63, 11.404],
+  zoom: 5,
+  maxZoom: 10,
+  minZoom: 5,
+  center: [122.104, 12.100],
   // maxBounds: [[104.7, 10.647], [140.59, 10.6]]
 });
 
@@ -32,8 +32,8 @@ map.on('load', function () {
         type: 'geojson',
         data: 'data/simplified_regions.geojson',
       },
-      maxzoom: 5,
-      minzoom: 4,
+      maxzoom: 6,
+      minzoom: 5,
       paint: {
         'fill-color': [
           'match',
@@ -92,8 +92,8 @@ map.on('load', function () {
         type: 'geojson',
         data: 'data/simplified_provinces.geojson',
       },
-      minzoom: 5,
-      maxzoom: 7,
+      minzoom: 6,
+      maxzoom: 8,
       paint: {
         'fill-color': [
           'match',
@@ -137,7 +137,7 @@ map.on('load', function () {
         type: 'geojson',
         data: 'data/simplified_municipalities.geojson',
       },
-      minzoom: 7,
+      minzoom: 8,
       paint: {
         'line-color': '#ffffff',
         'line-width': 0.25,
