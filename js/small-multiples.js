@@ -70,8 +70,8 @@
           .append('g')
           .attr('class', 'axis y-axis')
           .style('stroke-width', 2) // increase stroke width of axis
-          .style('font', '13px times')
-          .style('font-family', 'roboto')
+          .style('font-size', '14px')
+          .style('font-family', 'Roboto')
           .call(yAxis);
 
         const xAxis = d3.axisBottom(xPositionScale).ticks(3);
@@ -79,16 +79,16 @@
           .append('g')
           .attr('class', 'axis x-axis')
           .style('stroke-width', 2) // increase stroke width of axis
-          .style('font', '13px times')
-          .style('font-family', 'roboto')
+          .style('font-size', '14px')
+          .style('font-family', 'Roboto')
           .attr('transform', 'translate(0,' + height + ')')
           .call(xAxis);
 
         svg
         .append('text')
         .attr("x", (width / 2)) 
-        .style('font', '15px times')
-        .style('font-family', 'roboto')
+        .style('font-size', '15px')
+        .style('font-family', 'Roboto')
         .style('font-weight', 'bold')  
         .attr("text-anchor", "middle")
         .attr('transform', 'translate(0,-30)')

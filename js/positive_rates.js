@@ -69,8 +69,8 @@
         svg.append("g")
             .attr("class", "axis y-axis")
             .style("stroke-width", 3) // increase stroke width of axis
-            .style("font", "12px times")
-            .style("font-family", "roboto")
+            .style("font-size", "14px")
+            .style("font-family", "Roboto")
             .call(yAxis)
 
         const xAxis = d3.axisBottom(xPositionScale)
@@ -83,8 +83,8 @@
             .attr("class", "axis x-axis")
             .attr("transform", "translate(0," + height + ")")
             .style("stroke-width", 3) // increase stroke width of axis
-			.style("font", "12px times")
-            .style("font-family", "roboto")
+			.style("font-size", "14px")
+            .style("font-family", "Roboto")
             .call(xAxis)
 
         svg.append("text")
@@ -93,7 +93,7 @@
         .attr("text-anchor", "middle")  
         .style("font-size", "14px")
         .style("fill", "black") 
-        .style("font-family", "roboto")
+        .style("font-family", "Roboto")
         .text("Positivity rate");
     }
 })()

@@ -69,7 +69,7 @@
         svg.append("g")
             .attr("class", "axis y-axis")
             .style("stroke-width", 3) // increase stroke width of axis
-            .style("font", "12px times")
+            .style("font-size", "14px")
             .style("font-family", "roboto")
             .call(yAxis)
 
@@ -83,7 +83,7 @@
             .attr("class", "axis x-axis")
             .attr("transform", "translate(0," + height + ")")
             .style("stroke-width", 3) // increase stroke width of axis
-			.style("font", "12px times")
+			.style("font-size", "14px")
             .style("font-family", "roboto")
             .call(xAxis)
 
