@@ -12,6 +12,8 @@ var map = new mapboxgl.Map({
 
 map.touchZoomRotate.disableRotation();
 
+map.dragRotate.disable();
+
 map.on('load', function () {
   map.resize();
   map.addLayer({
