@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
   maxZoom: 10,
   minZoom: 5,
   center: [122.104, 12.100],
-  // maxBounds: [[122.104, 12.100], [122.104, 15.929]]
+  dragPan: false
 });
 
 map.touchZoomRotate.disableRotation();
