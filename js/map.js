@@ -7,8 +7,10 @@ var map = new mapboxgl.Map({
   maxZoom: 10,
   minZoom: 5,
   center: [122.104, 12.100],
-  // maxBounds: [[104.7, 10.647], [140.59, 10.6]]
+  // maxBounds: [[122.104, 12.100], [122.104, 15.929]]
 });
+
+map.touchZoomRotate.disableRotation();
 
 map.on('load', function () {
   map.resize();

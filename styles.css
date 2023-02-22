@@ -176,6 +176,11 @@ a {
   color: #bbbbbb;
 }
 
+#mobile-header {
+  margin-top: 30px;
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
   .legend-title {
     visibility: hidden;
@@ -225,11 +230,16 @@ a {
 
   #small-multiples {
     transform: translate(5%);
+    width: 100%;
     align-items: center;
     font-family: 'Roboto', sans-serif;
   }
 
   .col-sm-12 {
     overflow: auto;
+  }
+
+  #mobile-header {
+    display:block;
   }
 }

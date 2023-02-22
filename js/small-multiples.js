@@ -34,7 +34,6 @@
     const maxCases = d3.max(datapoints, (d) => d['Case per 100,000']);
     yPositionScale.domain([0, maxCases]).nice();
     xPositionScale.domain(d3.extent(datapoints, (d) => d.date));
-    
 
     const grouped = d3.group(datapoints, (d) => d['Region']);
 
@@ -59,7 +58,7 @@
         svg
           .append('path')
           .datum(datapoints)
-          .attr('stroke', "#d72514")
+          .attr('stroke', '#d72514')
           .attr('stroke-linecap', 'round')
           .attr('stroke-width', 2)
           .attr('fill', 'none')
@@ -85,14 +84,14 @@
           .call(xAxis);
 
         svg
-        .append('text')
-        .attr("x", (width / 2)) 
-        .style('font-size', '15px')
-        .style('font-family', 'Roboto')
-        .style('font-weight', 'bold')  
-        .attr("text-anchor", "middle")
-        .attr('transform', 'translate(0,-30)')
-        .text(`${groupName}`);  
+          .append('text')
+          .attr('x', width / 2)
+          .style('font-size', '15px')
+          .style('font-family', 'Roboto')
+          .style('font-weight', 'bold')
+          .attr('text-anchor', 'middle')
+          .attr('transform', 'translate(0,-30)')
+          .text(`${groupName}`);
       });
   }
 })();
